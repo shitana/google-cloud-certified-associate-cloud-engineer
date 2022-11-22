@@ -1,7 +1,7 @@
 # Introduction
 ## ORG . Folder . Project
   
-![Global Archi](img/umacui39.bmp)
+![Global Archi](img/umacui39.jpg)
 
 ## Access: IAM
   * Policy: Role binding between Pricipals (user, group, svc account, ...) and Roles
