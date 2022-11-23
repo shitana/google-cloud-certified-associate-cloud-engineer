@@ -65,12 +65,21 @@ https://cloud.google.com/storage/docs/introduction
   * Nearline has a 30 day minimum duration and data retrieval charges
   * Coldline has a 90 day min duration and data retrieval charges
   * Archive has a 365 day min duration and data retrieval charges
+* Lifecycle: https://cloud.google.com/storage/docs/lifecycle (Exple )
+    * Downgrade the storage class of objects older than 365 days to Coldline storage.
+    * Delete objects created before January 1, 2019.
+    * Keep only the 3 most recent versions of each object in a bucket with versioning enabled.
+![](img/Screenshot%202022-11-23%20at%2023-09-26%20Preparing_for_ACE_Module_4_v2.0%20-%20Reading_Preparing_for_ACE_Module_4_v2.0.pdf.png)
 
 
 ## VPC 
 https://cloud.google.com/vpc/docs/vpc
 * Automode: auto-creation of network when we create a ressources in any region
 * Custom: creation of ressources allowed only in the configured region
+* Expand ip range
+  * expand ip range within a VPC by reducing your subnet mask
+  * it can be undone
+  * 
 
 ## Compute
 https://cloud.google.com/compute/docs/disks/snapshots
@@ -78,7 +87,6 @@ https://cloud.google.com/compute/docs/disks/snapshots
   * we can create a schedule snapshot
   * Only the first one is a fullsnapshot
   * Snapshot N+1 contains only updated block of snapshot N
-
 
 ### Instance template
 https://cloud.google.com/compute/docs/instance-templates
@@ -89,6 +97,13 @@ https://cloud.google.com/compute/docs/instance-templates
   * Automated Update
 https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances 
 https://cloud.google.com/compute/docs/instance-groups
+
+# Monitoring 
+https://cloud.google.com/monitoring/alerts/using-alerting-ui
+https://cloud.google.com/monitoring/alerts
+* WHAT => HOW => WHO
+[](img/gcp%20monitoring.png)
+
 
 # Tuto:
 * Perform Foundational Infrastructure Tasks in Google Cloud: (https://www.qwiklabs.com/quests/118)
