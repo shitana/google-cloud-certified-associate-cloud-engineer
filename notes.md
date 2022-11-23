@@ -28,16 +28,30 @@
 
 ## GKE
 https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters
+https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview
 * Autopilot : Fully-provisioned and managed Cluster
 * Standard : We can define and manage Cluster
+### Networking
 * Network Routing: 
   * VPC-native cluster
   * Route-based cluster
+* To Deploy Ingress internal HTTP(s) load balancer `ingress.class: “gce-internal”` we should anootate service with a NEG ref 
+  * NEG: Network Endpoint Groups `cloud.google.com/neg: '{"ingress": true}'`
+  * https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-ilb
+  * https://cloud.google.com/kubernetes-engine/docs/how-to/internal-load-balance-ingress
+* To Deploy Ingress External HTTP(s) load balance `ingress.class: “gce”`
+  * https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb
+  * https://cloud.google.com/kubernetes-engine/docs/how-to/load-balance-ingress
+
+ 
 
 ## Cloud run
 https://cloud.google.com/run/docs/quickstarts?hl=en#build-and-deploy
 * easiest deploiment methode :
   * Cloud run ==> GKE ==> Compute
+* https://cloud.google.com/run/docs/about-instance-autoscaling
+  * We can set au min instances / max instances 
+  * we can set concurrency to handle how many user can connect to a particular instance
 
 ## Cloud Functions:
 https://cloud.google.com/functions/docs/calling 
