@@ -47,6 +47,21 @@ https://cloud.google.com/run/docs/quickstarts?hl=en#build-and-deploy
 ## Cloud Functions:
 https://cloud.google.com/functions/docs/calling 
 * Serverless function execution trggered by an event
+
+## Storage
+https://cloud.google.com/storage/docs/creating-buckets
+https://cloud.google.com/storage/docs/introduction
+* Storage class it depends on your needs:
+  * Standard is for immediate access and has no minimum storage duration
+  * Nearline has a 30 day minimum duration and data retrieval charges
+  * Coldline has a 90 day min duration and data retrieval charges
+  * Archive has a 365 day min duration and data retrieval charges
+
+## VPC 
+https://cloud.google.com/vpc/docs/vpc
+* Automode: auto-creation of network when we create a ressources in any region
+* Custom: creation of ressources allowed only in the configured region
+
 # Tuto:
 * Perform Foundational Infrastructure Tasks in Google Cloud: (https://www.qwiklabs.com/quests/118)
 * Set Up and Configure a Cloud Environment in Google Cloud
