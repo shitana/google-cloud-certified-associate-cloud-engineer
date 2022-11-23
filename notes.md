@@ -23,12 +23,6 @@
 ![IAM](img/Capture%20d%E2%80%99%C3%A9cran%202022-11-22%20224026.jpg)
 * IAM: https://cloud.google.com/iam/docs/overview
 
-## Managed Instance Group: 
-  * Availability
-  * Scalability 
-  * Automated Update
-https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances 
-
 ## Regions & Zones
 * Region contains 3 or more zones
 
@@ -58,14 +52,32 @@ https://cloud.google.com/storage/docs/introduction
   * Coldline has a 90 day min duration and data retrieval charges
   * Archive has a 365 day min duration and data retrieval charges
 
+
 ## VPC 
 https://cloud.google.com/vpc/docs/vpc
 * Automode: auto-creation of network when we create a ressources in any region
 * Custom: creation of ressources allowed only in the configured region
 
+## Compute
+https://cloud.google.com/compute/docs/disks/snapshots
+* Persistent disk snapshots : backup disk 
+  * we can create a schedule snapshot
+  * Only the first one is a fullsnapshot
+  * Snapshot N+1 contains only updated block of snapshot N
+
+
+### Instance template
+https://cloud.google.com/compute/docs/instance-templates
+* Used to create a MIG or VM
+### Managed Instance Group: 
+  * Availability
+  * Scalability 
+  * Automated Update
+https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances 
+https://cloud.google.com/compute/docs/instance-groups
+
 # Tuto:
 * Perform Foundational Infrastructure Tasks in Google Cloud: (https://www.qwiklabs.com/quests/118)
-* Set Up and Configure a Cloud Environment in Google Cloud
-(https://www.qwiklabs.com/quests/119)
+* Set Up and Configure a Cloud Environment in Google Cloud: (https://www.qwiklabs.com/quests/119)
 * Create and Manage Cloud Resources: (https://www.qwiklabs.com/quests/120)
 * https://www.cloudskillsboost.google/paths/11
