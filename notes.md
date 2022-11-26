@@ -1,10 +1,9 @@
 [[_TOC_]]
 # Introduction
 ## ORG . Folder . Project
-  
 ![Global Archi](img/umacui39.jpg)
 
-## Access: IAM
+## Access: [IAM](https://cloud.google.com/iam/docs/overview)
   * Policy: Role binding between Pricipals (user, group, svc account, ...) and Roles
   * **WHO** Principals:
     * Google Account
@@ -18,17 +17,27 @@
     * Basics
     * Predefined
     * Custom 
-
-## IAM
+* Create service account ==> Assign permissions ==> Attach to ressource (VM)
 ![IAM](img/Capture%20d%E2%80%99%C3%A9cran%202022-11-22%20224026.jpg)
-* IAM: https://cloud.google.com/iam/docs/overview
+
+* Identity and Access Managment
+![](img/svc%20accoutn%20iam.png)
+* [Create a custom role](https://cloud.google.com/iam/docs/creating-custom-roles) : 
+![](img/GCP%20custom%20role.png)
+### [Service Account](https://cloud.google.com/docs/authentication#service-accounts)
+![](img/GCP%20SVC.png)
+1. [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account) : 
+2. 
+
+
+
 
 ## Regions & Zones
 * Region contains 3 or more zones
 
 ## GKE
-https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters
-https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview
+* [Cluster Type](https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters)
+* [GKE Overview](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
 * Autopilot : Fully-provisioned and managed Cluster
 * Standard : We can define and manage Cluster
 ### Networking
@@ -43,13 +52,15 @@ https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overv
   * https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb
   * https://cloud.google.com/kubernetes-engine/docs/how-to/load-balance-ingress
 
+### Security
+https://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#managing_identity_and_access
  
 
 ## Cloud run
 https://cloud.google.com/run/docs/quickstarts?hl=en#build-and-deploy
 * easiest deploiment methode :
   * Cloud run ==> GKE ==> Compute
-* https://cloud.google.com/run/docs/about-instance-autoscaling
+* [Autoscaling](https://cloud.google.com/run/docs/about-instance-autoscaling)
   * We can set au min instances / max instances 
   * we can set concurrency to handle how many user can connect to a particular instance
 
@@ -57,23 +68,21 @@ https://cloud.google.com/run/docs/quickstarts?hl=en#build-and-deploy
 https://cloud.google.com/functions/docs/calling 
 * Serverless function execution trggered by an event
 
-## Storage
+## [Storage](https://cloud.google.com/storage/docs/introduction)
 https://cloud.google.com/storage/docs/creating-buckets
-https://cloud.google.com/storage/docs/introduction
 * Storage class it depends on your needs:
   * Standard is for immediate access and has no minimum storage duration
   * Nearline has a 30 day minimum duration and data retrieval charges
   * Coldline has a 90 day min duration and data retrieval charges
   * Archive has a 365 day min duration and data retrieval charges
-* Lifecycle: https://cloud.google.com/storage/docs/lifecycle (Exple )
+* [Lifecycle](https://cloud.google.com/storage/docs/lifecycle): (Exple )
     * Downgrade the storage class of objects older than 365 days to Coldline storage.
     * Delete objects created before January 1, 2019.
     * Keep only the 3 most recent versions of each object in a bucket with versioning enabled.
 ![](img/Screenshot%202022-11-23%20at%2023-09-26%20Preparing_for_ACE_Module_4_v2.0%20-%20Reading_Preparing_for_ACE_Module_4_v2.0.pdf.png)
 
 
-## VPC 
-https://cloud.google.com/vpc/docs/vpc
+## [VPC](https://cloud.google.com/vpc/docs/vpc) 
 * Automode: auto-creation of network when we create a ressources in any region
 * Custom: creation of ressources allowed only in the configured region
 * Expand ip range
@@ -81,8 +90,7 @@ https://cloud.google.com/vpc/docs/vpc
   * it can be undone
   * 
 
-## Compute
-https://cloud.google.com/compute/docs/disks/snapshots
+## [Compute](https://cloud.google.com/compute/docs/disks/snapshots)
 * Persistent disk snapshots : backup disk 
   * we can create a schedule snapshot
   * Only the first one is a fullsnapshot
@@ -91,18 +99,16 @@ https://cloud.google.com/compute/docs/disks/snapshots
 ### Instance template
 https://cloud.google.com/compute/docs/instance-templates
 * Used to create a MIG or VM
-### Managed Instance Group: 
+### [Managed Instance Group](https://cloud.google.com/compute/docs/instance-groups) 
   * Availability
   * Scalability 
   * Automated Update
-https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances 
-https://cloud.google.com/compute/docs/instance-groups
 
 # Monitoring 
-https://cloud.google.com/monitoring/alerts/using-alerting-ui
-https://cloud.google.com/monitoring/alerts
+* https://cloud.google.com/monitoring/alerts/using-alerting-ui
+* https://cloud.google.com/monitoring/alerts
 * WHAT => HOW => WHO
-[](img/gcp%20monitoring.png)
+![](img/gcp%20monitoring.png)
 
 
 # Tuto:
