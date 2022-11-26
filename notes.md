@@ -17,19 +17,21 @@
     * Basics
     * Predefined
     * Custom 
-* Create service account ==> Assign permissions ==> Attach to ressource (VM)
-![IAM](img/Capture%20d%E2%80%99%C3%A9cran%202022-11-22%20224026.jpg)
+### [Authentication](https://cloud.google.com/docs/authentication/)
+* Types of authentication keys
+![](img/GCP%20Authentication.png)
 
-* Identity and Access Managment
-![](img/svc%20accoutn%20iam.png)
 * [Create a custom role](https://cloud.google.com/iam/docs/creating-custom-roles) : 
 ![](img/GCP%20custom%20role.png)
 ### [Service Account](https://cloud.google.com/docs/authentication#service-accounts)
-![](img/GCP%20SVC.png)
+![](img/svc%20accoutn%20iam.png)
+
+* Create service account ==> Assign permissions ==> Attach to ressource (VM)
+![IAM](img/Capture%20d%E2%80%99%C3%A9cran%202022-11-22%20224026.jpg)
+
 1. [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account) : 
-2. 
-
-
+2. Using service accounts with IAM policies
+3. [Assigning service accounts to resources](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#using) 
 
 
 ## Regions & Zones
@@ -80,6 +82,8 @@ https://cloud.google.com/storage/docs/creating-buckets
     * Delete objects created before January 1, 2019.
     * Keep only the 3 most recent versions of each object in a bucket with versioning enabled.
 ![](img/Screenshot%202022-11-23%20at%2023-09-26%20Preparing_for_ACE_Module_4_v2.0%20-%20Reading_Preparing_for_ACE_Module_4_v2.0.pdf.png)
+* [Audit Logs with Cloud Storage](https://cloud.google.com/storage/docs/audit-logging)
+* ![](img/GCP%20sotrage%20audit%20logs.png)
 
 
 ## [VPC](https://cloud.google.com/vpc/docs/vpc) 
@@ -104,9 +108,15 @@ https://cloud.google.com/compute/docs/instance-templates
   * Scalability 
   * Automated Update
 
-# Monitoring 
+## Monitoring
+### [Logging](https://cloud.google.com/logging/docs/audit)
+* 4 Audit logs type
+  * Admin Activity
+  * Data Access
+  * System Event
+  * Policy Denied
+### [Alerting](https://cloud.google.com/monitoring/alerts)
 * https://cloud.google.com/monitoring/alerts/using-alerting-ui
-* https://cloud.google.com/monitoring/alerts
 * WHAT => HOW => WHO
 ![](img/gcp%20monitoring.png)
 
