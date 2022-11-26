@@ -27,6 +27,7 @@
 ![](img/svc%20accoutn%20iam.png)
 
 * Create service account ==> Assign permissions ==> Attach to ressource (VM)
+
 ![IAM](img/Capture%20d%E2%80%99%C3%A9cran%202022-11-22%20224026.jpg)
 
 1. [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account) : 
