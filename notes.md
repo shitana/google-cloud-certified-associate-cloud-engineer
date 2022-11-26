@@ -54,8 +54,7 @@
   * https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb
   * https://cloud.google.com/kubernetes-engine/docs/how-to/load-balance-ingress
 
-### Security
-https://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#managing_identity_and_access
+### [Security](https://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#managing_identity_and_access)
  
 
 ## Cloud run
@@ -66,9 +65,8 @@ https://cloud.google.com/run/docs/quickstarts?hl=en#build-and-deploy
   * We can set au min instances / max instances 
   * we can set concurrency to handle how many user can connect to a particular instance
 
-## Cloud Functions:
-https://cloud.google.com/functions/docs/calling 
-* Serverless function execution trggered by an event
+## Cloud Functions: 
+* [Serverless function execution trggered by an event](https://cloud.google.com/functions/docs/calling)
 
 ## [Storage](https://cloud.google.com/storage/docs/introduction)
 https://cloud.google.com/storage/docs/creating-buckets
@@ -81,9 +79,11 @@ https://cloud.google.com/storage/docs/creating-buckets
     * Downgrade the storage class of objects older than 365 days to Coldline storage.
     * Delete objects created before January 1, 2019.
     * Keep only the 3 most recent versions of each object in a bucket with versioning enabled.
+
 ![](img/Screenshot%202022-11-23%20at%2023-09-26%20Preparing_for_ACE_Module_4_v2.0%20-%20Reading_Preparing_for_ACE_Module_4_v2.0.pdf.png)
 * [Audit Logs with Cloud Storage](https://cloud.google.com/storage/docs/audit-logging)
-* ![](img/GCP%20sotrage%20audit%20logs.png)
+
+![](img/GCP%20sotrage%20audit%20logs.png)
 
 
 ## [VPC](https://cloud.google.com/vpc/docs/vpc) 
@@ -92,7 +92,6 @@ https://cloud.google.com/storage/docs/creating-buckets
 * Expand ip range
   * expand ip range within a VPC by reducing your subnet mask
   * it can be undone
-  * 
 
 ## [Compute](https://cloud.google.com/compute/docs/disks/snapshots)
 * Persistent disk snapshots : backup disk 
@@ -100,8 +99,7 @@ https://cloud.google.com/storage/docs/creating-buckets
   * Only the first one is a fullsnapshot
   * Snapshot N+1 contains only updated block of snapshot N
 
-### Instance template
-https://cloud.google.com/compute/docs/instance-templates
+### [Instance template](https://cloud.google.com/compute/docs/instance-templates)
 * Used to create a MIG or VM
 ### [Managed Instance Group](https://cloud.google.com/compute/docs/instance-groups) 
   * Availability
@@ -118,6 +116,7 @@ https://cloud.google.com/compute/docs/instance-templates
 ### [Alerting](https://cloud.google.com/monitoring/alerts)
 * https://cloud.google.com/monitoring/alerts/using-alerting-ui
 * WHAT => HOW => WHO
+
 ![](img/gcp%20monitoring.png)
 
 
