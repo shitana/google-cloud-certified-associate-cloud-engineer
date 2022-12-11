@@ -151,6 +151,11 @@ gcloud compute firewall-rules list --sort-by=NETWORK
 
 ![Alt text](img/GCP%20VM%20Storage.jpg)
 
+## VM Commun actions
+* Startup & Shutdown scripts : they can hae access to VM's metadata 
+*  Move VM (and all subprocess)
+   *  Automated : within region 
+   *  Manual : between region
 
 ## Images
 * Public base images  
