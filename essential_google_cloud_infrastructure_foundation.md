@@ -156,7 +156,7 @@ gcloud compute firewall-rules list --sort-by=NETWORK
 *  Move VM (and all subprocess)
    *  Automated : within region 
    *  Manual : between region
-*  Snapshot data
+*  Snapshot disk to "*Cloud storage*"
    *  to simplify move disk 
    *  to simplify upgrade disk type
 
