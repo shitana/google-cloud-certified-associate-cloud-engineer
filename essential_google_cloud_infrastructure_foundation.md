@@ -116,7 +116,47 @@ gcloud compute firewall-rules list --sort-by=NETWORK
 ![Alt text](img/GCP%20Cloud%20NAT%20Cloud%20Router.jpg)
 
 # VM Instance 
-## VM without External IP
+
+## Machine type structure
+* Family (Genaral, Compute, ...)  ==> Series (E2, N1, N2, ...) ==> Type 
+![Alt text](img/GCP%20VM%20Family.jpg)
+![Alt text](img/GCP%20VM%20Family%202.jpg)
+![Alt text](img/GCP%20VM%20Family%203.jpg)
+![Alt text](img/GCP%20VM%20Family%204.jpg)
+## VM Lifecycle
+![Alt text](img/GCP%20VM%20Lifecycle.jpg)
+* When VM is running  :
+  * we can not Update Availibility policies 
+  * we can not Update Machine Type
+  * we can add network
+  * we can add disk
+
+## SPOT VM (Preemptible)
+* Spot VMs are available at much lower prices—60-91% discounts
+* **Compute Engine might preemptively stop or delete (preempt) Spot VMs when it needs to reclaim that capacity.**
+
+## VM Windows
+* In order to enable remote connection :
+  * Enable HTTP/HTTPS access in firewall section during creation
+  * Set Login/Password here : **VM Instance ==> Your-Windows-VM ==> Details**
+
+## Storage:
+* Local SSD: a physicaly attatched disk to VM instance 
+  * Terminated / Stopped VM ==> Loss Data
+  * Cannot be attached to a different VM
+* [More storage type](https://cloud.google.com/compute/docs/disks)
+* Persistent disks
+  * Zonal or Regional
+  * Can be resized
+
+![Alt text](img/GCP%20VM%20Storage.jpg)
+
+
+## Images
+* Public base images  
+* Custom images
+
+## NETWORK VM without External IP
 ### EGRESS 
 * VM without External IP can reach external network only via VPN Gateway or [Cloud IAP](https://cloud.google.com/blog/products/identity-security/cloud-iap-enables-context-aware-access-to-vms-via-ssh-and-rdp-without-bastion-hosts)
 * VM without External IP can reach external IP Addresses of Google APIs only via [Private Google Access](https://cloud.google.com/vpc/docs/private-google-access)
